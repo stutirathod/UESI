@@ -1,0 +1,184 @@
+.container {
+  border-radius: 20px;
+  background: var(--Background-Grey, #f8f8fa);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  padding: 189px 80px 78px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 100px 20px 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  width: 817px;
+  max-width: 100%;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, sans-serif;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  .header {
+    max-width: 100%;
+  }
+}
+
+.title {
+  color: rgba(0, 0, 0, 1);
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .title {
+    max-width: 100%;
+  }
+}
+
+.formGroup {
+  border-radius: 5px;
+  display: flex;
+  margin-top: 33px;
+  width: 100%;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@media (max-width: 991px) {
+  .formGroup {
+    max-width: 100%;
+  }
+}
+
+.label {
+  color: rgba(0, 0, 0, 1);
+  align-self: start;
+}
+
+.input {
+  width: 100%;
+  border-radius: 5px;
+  background: var(--White, #fff);
+  margin-top: 10px;
+  /* min-height: 46px; */
+  color: var(--Grey, #687c94);
+  padding: 16px;
+  border: 1px solid #ddd;
+}
+
+.sectionTitle {
+  color: rgba(0, 0, 0, 1);
+  text-align: center;
+  align-self: center;
+  margin-top: 55px;
+  font: 700 36px Inter, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .sectionTitle {
+    margin-top: 40px;
+  }
+}
+
+/* Updated Video Upload Area */
+.videoUploadArea {
+  border-radius: 15px;
+  background: var(--Gray-100, #ececec);
+  min-height: 100px;
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: 2px dashed #bbb;
+}
+
+.videoUploadArea:hover {
+  background: #ddd;
+}
+
+/* File name display */
+.fileName {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Hidden file input */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Video preview styling */
+.videoPreview {
+  width: 100%;
+  max-height: 240px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Upload text when no video is selected */
+.uploadText {
+  color: #555;
+  font-size: 16px;
+}
+
+/* Textarea styling */
+.textarea {
+  border-radius: 5px;
+  background: var(--White, #fff);
+  margin-top: 10px;
+  min-height: 173px;
+  width: 100%;
+  color: var(--Grey, #687c94);
+  padding: 16px;
+  border: 1px solid #ddd;
+  resize: vertical;
+}
+
+.submitButton {
+  border-radius: 5px;
+  background-color: rgba(200, 111, 8, 1);
+  margin-top: 40px;
+  width: 100%;
+  color: var(--White, #fff);
+  text-align: center;
+  padding: 15px 40px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: rgba(180, 95, 5, 1);
+}
+
+@media (max-width: 991px) {
+  .submitButton {
+    max-width: 100%;
+    padding: 15px 20px;
+  }
+}

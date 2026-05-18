@@ -1,0 +1,156 @@
+.footer {
+  background: #263238;
+  padding: 80px 0 40px;
+  color: #f5f7fa;
+}
+
+.footerContent {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 70px;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 60px;
+}
+
+.companyInfo {
+  max-width: 380px;
+}
+
+.companyInfo p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(245, 247, 250, 0.8);
+  margin-bottom: 24px;
+}
+
+.copyright {
+  margin-top: 32px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(245, 247, 250, 0.6);
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.socialLinks {
+  margin-top: 32px;
+  display: flex;
+  gap: 20px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background: #f08a5d;
+  transform: translateY(-2px);
+}
+
+.socialIcon {
+  width: 18px;
+  height: 18px;
+  color: #f5f7fa;
+}
+
+.linkColumns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.linkColumn {
+  min-width: 160px;
+}
+
+.columnTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #f5f7fa;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.columnTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #f08a5d;
+  border-radius: 2px;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin-bottom: 16px;
+}
+
+.linkList a {
+  color: rgba(245, 247, 250, 0.8);
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  position: relative;
+}
+
+.linkList a:hover {
+  color: #f08a5d;
+  transform: translateX(5px);
+}
+
+@media (max-width: 991px) {
+  .footer {
+    padding: 60px 0 32px;
+  }
+
+  .footerContent {
+    padding: 0 24px;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .linkColumns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .companyInfo {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 48px 0 24px;
+  }
+
+  .linkColumns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}

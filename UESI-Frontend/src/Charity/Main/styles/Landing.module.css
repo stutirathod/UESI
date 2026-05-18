@@ -1,0 +1,697 @@
+.landingPage {
+  background: linear-gradient(to bottom, rgba(251, 243, 236, 0.4), rgba(255, 255, 255, 0.95));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 100px 40px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.landingPage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8B4513, #CB820C, #8B4513);
+}
+
+.heroSection {
+  width: 100%;
+  max-width: 1400px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.heroContent {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.heroLeft {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+
+.mainHeading {
+  color: rgba(109, 59, 1, 1);
+  margin: 0;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 4px rgba(230, 119, 15, 0.1);
+}
+
+.decorativeImage {
+  width: 100%;
+  max-width: 489px;
+  height: auto;
+  margin-top: 32px;
+  opacity: 0.9;
+  filter: drop-shadow(0 4px 12px rgba(171, 108, 56, 0.15));
+  transition: all 0.3s ease;
+}
+
+.decorativeImage:hover {
+  opacity: 1;
+  filter: drop-shadow(0 8px 24px rgba(171, 108, 56, 0.2));
+}
+
+.ctaContainer {
+  margin-top: 32px;
+}
+
+.subHeading {
+  color: rgba(139, 110, 81, 0.9);
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #CB820C, #8B4513);
+  color: white;
+  padding: 16px 36px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(227, 167, 111, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(227, 167, 111, 0.3);
+  background: linear-gradient(135deg, #D4946B, #E3A76F);
+  animation: pulse 1.5s infinite;
+}
+
+.primaryButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.primaryButton:hover::after {
+  left: 100%;
+}
+
+.secondaryButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #8B6E51;
+  background: transparent;
+  border: 2px solid rgba(227, 167, 111, 0.3);
+  border-radius: 30px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 242, 230, 0.5);
+  border-color: rgba(227, 167, 111, 0.5);
+  transform: translateY(-2px);
+}
+
+.buttonIcon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.secondaryButton:hover .buttonIcon {
+  transform: scale(1.1);
+}
+
+.heroRight {
+  width: 55%;
+}
+
+.heroImage {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(171, 108, 56, 0.15);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.heroImage:hover {
+  transform: scale(1.03) translateY(-8px);
+  box-shadow: 0 16px 36px rgba(171, 108, 56, 0.2);
+}
+
+.programHeading {
+  color: #160a02;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  margin: 80px 0 50px;
+  position: relative;
+  text-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+}
+
+.programHeading::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #CB820C, #8B4513);
+  border-radius: 2px;
+}
+
+.charityPrograms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 20px;
+}
+
+.charityCard {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(171, 108, 56, 0.08);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(171, 108, 56, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: revealUp 0.6s ease-out forwards;
+}
+
+.charityCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(139, 69, 19, 0.12);
+  border-color: rgba(203, 130, 12, 0.2);
+}
+
+.charityCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #CB820C, #8B4513);
+  transition: width 0.3s ease;
+}
+
+.charityCard:hover::after {
+  width: 100%;
+}
+
+.charityImageWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.charityImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+}
+
+.charityCard:hover .charityImage {
+  transform: scale(1.05);
+}
+
+.charityImage::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.charityContent {
+  padding: 24px;
+  background: linear-gradient(0deg, white 0%, rgba(251, 243, 236, 0.5) 100%);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.charityTitle {
+  color: #3A1700;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.charityCard:hover .charityTitle {
+  color: #CB820C;
+}
+
+.charityTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #CB820C, #8B4513);
+  transition: width 0.3s ease;
+}
+
+.charityCard:hover .charityTitle::after {
+  animation: lineExpand 0.3s ease forwards;
+}
+
+.charityDescription {
+  color: rgba(83, 39, 10, 0.8);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.learnMoreButton {
+  color: #E3A76F;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.learnMoreButton:hover {
+  color: #B87333;
+  transform: translateX(4px);
+}
+
+.donationSection {
+  background: linear-gradient(135deg, #6e6e6e, #7a4926);
+  border-radius: 30px;
+  padding: 60px;
+  width: 90%;
+  max-width: 1400px;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.donationSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(203, 130, 12, 0.1), rgba(255, 255, 255, 0.05));
+  pointer-events: none;
+}
+
+.donationForm {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.amountInput {
+  font-size: 18px;
+  border: 2px solid rgba(203, 130, 12, 0.2);
+  border-radius: 12px;
+  padding: 14px 24px;
+  color: #3A1700;
+  width: 100%;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.amountInput:focus {
+  outline: none;
+  border-color: #CB820C;
+  box-shadow: 0 0 0 4px rgba(203, 130, 12, 0.1);
+  background: white;
+}
+
+.sendButton {
+  margin-top: 22px;
+  margin-left: 15px;
+  background: linear-gradient(135deg, #CB820C, #8B4513);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 16px;
+
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sendButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(203, 130, 12, 0.2);
+  background: linear-gradient(135deg, #8B4513, #CB820C);
+}
+
+.testimonialHeading {
+  color: #703905;
+  text-align: center;
+  margin-top: 276px;
+  font: 700 40px Poppins, sans-serif;
+}
+
+.impactSection {
+  width: 100%;
+  padding: 42px 80px 183px;
+  margin-top: 328px;
+}
+
+.impactContent {
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+.impactHeading {
+  color: #2b1603;
+  font: 600 50px Poppins, sans-serif;
+}
+
+.testimonialContent {
+  margin-top: 14px;
+  color: #000;
+  font: 500 18px/30px Poppins, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.testimonialIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 28px 0;
+  border: 2px solid rgba(171, 108, 56, 0.2);
+  padding: 2px;
+}
+
+.testimonialQuote {
+  margin: 20px 0;
+}
+
+.testimonialFooter {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.startShareButton {
+  background-color: #E3A76F;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 15px 28px;
+  font: 500 18px Poppins, sans-serif;
+  cursor: pointer;
+}
+
+.testimonialAuthor {
+  color: #000;
+  font: 500 18px/2 Poppins, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .heroContent {
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+
+  .heroLeft,
+  .heroRight {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .mainHeading {
+    font-size: 42px;
+  }
+
+  .subHeading {
+    font-size: 16px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .charityPrograms {
+    grid-template-columns: 1fr;
+  }
+
+  .donationSection {
+    padding: 40px 20px;
+    margin: 60px 20px;
+  }
+
+  .donationForm {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .sendButton {
+    width: 100%;
+  }
+
+  .testimonialHeading {
+    margin-top: 40px;
+  }
+
+  .impactSection {
+    margin-top: 40px;
+    padding: 20px 20px 100px;
+  }
+
+  .impactHeading {
+    font-size: 40px;
+  }
+
+  .heroImage {
+    height: 400px;
+  }
+
+  .charityImage {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroImage {
+    height: 300px;
+  }
+
+  .charityImage {
+    height: 180px;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 248, 240, 0.4), rgba(255, 255, 255, 0.2));
+}
+
+.charityImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(171, 108, 56, 0.05) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.charityCard:hover .charityImageOverlay {
+  opacity: 1;
+}
+
+.newsletterImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(171, 108, 56, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.newsletterImage:hover {
+  transform: scale(1.02);
+}
+
+.impactImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 40px 0;
+  box-shadow: 0 8px 24px rgba(171, 108, 56, 0.15);
+}
+
+.imageLoading {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(251, 243, 236, 0.4) 0%,
+    rgba(251, 243, 236, 0.7) 50%,
+    rgba(251, 243, 236, 0.4) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    background-position: 200% 0;
+    opacity: 0.6;
+  }
+}
+
+.aspectRatioBox {
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.aspectRatioBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes revealUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineExpand {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(203, 130, 12, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(203, 130, 12, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(203, 130, 12, 0);
+  }
+}
+
+.buttonIcon:hover,
+.testimonialIcon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.charityImage:hover,
+.newsletterImage:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Add smooth transition for all interactive elements */
+.buttonIcon,
+.charityImage,
+.testimonialIcon,
+.newsletterImage {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.donationHeading{
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 10px;
+}

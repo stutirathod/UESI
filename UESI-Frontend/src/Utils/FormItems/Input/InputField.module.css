@@ -1,0 +1,23 @@
+.label {
+  margin-top: 10px;
+  font-size: medium;
+}
+
+.inputField {
+  border-radius: 5px;
+  background: var(--White, #fff);
+  display: flex;
+  margin-top: 10px;
+  height: 46px;
+  gap: 10px;
+  border: 1px solid #ddd;
+  padding: 0 10px;
+}
+
+.inputGroup {
+  border-radius: 5px;
+  display: flex;
+  margin-top: 33px;
+  width: 100%;
+  flex-direction: column;
+}

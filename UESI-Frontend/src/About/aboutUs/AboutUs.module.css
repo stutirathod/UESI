@@ -1,0 +1,558 @@
+/* UESI Brand Color Variables */
+:root {
+  --primary-dark: #8B4513;    /* Dark Brown */
+  --primary-main: #B27937;    /* Medium Brown */
+  --primary-light: #D4A76A;   /* Light Brown */
+  
+  --accent-dark: #C17F11;     /* Dark Gold */
+  --accent-main: #E3B548;     /* Medium Gold */
+  --accent-light: #F3D388;    /* Light Gold */
+  
+  --neutral-100: #F8FAFC;
+  --neutral-200: #E2E8F0;
+  --neutral-700: #4A5568;
+  --neutral-800: #2D3748;
+}
+
+/* About Us Container */
+.container {
+  background: linear-gradient(
+    135deg,
+    rgba(243, 211, 136, 0.1) 0%,    /* Light Gold Tint */
+    rgba(255, 255, 255, 0.95) 50%,
+    rgba(243, 211, 136, 0.1) 100%
+  );
+  min-height: calc(100vh - 80px); /* Adjust for new navbar height */
+  padding: 40px 40px 80px;
+  margin-top: 80px; /* Adjust for new navbar height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px; /* Add top padding for better spacing */
+}
+
+/* Professional Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px; /* Increased height for better presence */
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(178, 121, 55, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.title {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 5rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  background: linear-gradient(45deg, 
+    var(--primary-dark),
+    var(--accent-dark)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.missionText {
+  color: #4A5568;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Source Serif Pro', serif;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+/* Stats Section */
+.statsContainer {
+  background: linear-gradient(
+    135deg,
+    rgba(178, 121, 55, 0.95) 0%,    /* Medium Brown */
+    rgba(139, 69, 19, 0.90) 50%,     /* Dark Brown */
+    rgba(178, 121, 55, 0.95) 100%
+  );
+  border-radius: 30px;
+  padding: 70px 60px;
+  width: 100%;
+  box-shadow: 
+    0 25px 50px -12px rgba(178, 121, 55, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  margin: 40px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add decorative elements */
+.statsContainer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.statsTitle {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: -0.02em;
+  position: relative;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statsTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+}
+
+.statsWrapper {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.statsWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
+  );
+  pointer-events: none;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  position: relative;
+}
+
+.statItem {
+  text-align: center;
+  padding: 30px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.statItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-8px);
+}
+
+.statItem:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.statNumber {
+  color: #FFFFFF;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(
+    to bottom right,
+    #FFFFFF,
+    rgba(243, 211, 136, 0.9)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statLabel {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Divider styling */
+.divider {
+  width: 1px;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  margin: auto;
+}
+
+/* Vision Section */
+.visionSection {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(243, 211, 136, 0.15)
+  );
+  border-radius: 24px;
+  margin: 40px 0;
+  width: 100%;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+.visionTitle {
+  color: var(--primary-dark);
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  letter-spacing: -0.01em;
+}
+
+.visionText {
+  color: #4A5568;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Values Section */
+.valuesTitle {
+  color: var(--primary-dark);
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 80px 0 48px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.valueItem {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(243, 211, 136, 0.2)
+  );
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 
+    0 10px 30px -5px rgba(178, 121, 55, 0.15),
+    0 0 0 1px rgba(178, 121, 55, 0.1);
+  transition: all 0.3s ease;
+}
+
+.valueItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px -10px rgba(178, 121, 55, 0.25),
+    0 0 0 1px rgba(178, 121, 55, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(243, 211, 136, 0.25)
+  );
+}
+
+.valueHeading {
+  color: var(--primary-dark);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.valueText {
+  color: #4A5568;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-family: 'Lato', sans-serif;
+}
+
+/* History Section */
+.historySection {
+  padding: 80px 0;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(243, 211, 136, 0.15)
+  );
+  border-radius: 24px;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+}
+
+.historyTitle {
+  color: var(--primary-dark);
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.historyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: justify;
+}
+
+.historyCard {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(243, 211, 136, 0.1)
+  );
+  border-radius: 20px;
+  padding: 40px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(178, 121, 55, 0.1);
+  box-shadow: 0 4px 20px rgba(178, 121, 55, 0.1);
+}
+
+.historyCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(178, 121, 55, 0.2);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(243, 211, 136, 0.15)
+  );
+}
+
+.historyCardTitle {
+  color: var(--primary-dark);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.historyCardDivider {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(178, 121, 55, 0.2),
+    rgba(178, 121, 55, 0.4)
+  );
+  margin: 20px 0;
+  border-radius: 2px;
+}
+
+.historyCardText {
+  color: #4A5568;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 32px 32px 60px;
+  }
+
+  .wrapper {
+    padding-top: 32px;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .statsContainer {
+    padding: 50px 40px;
+    margin: 30px 0 80px;
+  }
+
+  .statsWrapper {
+    padding: 40px;
+  }
+
+  .statsGrid {
+    gap: 40px;
+  }
+
+  .statNumber {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 24px 40px;
+    margin-top: 70px; /* Slightly reduce top margin on mobile */
+  }
+
+  .wrapper {
+    padding-top: 24px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .missionText {
+    font-size: 1.5rem;
+  }
+
+  .statsContainer {
+    padding: 40px 30px;
+    margin: 20px 0 60px;
+  }
+
+  .statsTitle {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .statsWrapper {
+    padding: 30px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .statItem {
+    padding: 20px;
+  }
+
+  .statNumber {
+    font-size: 3rem;
+  }
+
+  .statLabel {
+    font-size: 1.125rem;
+  }
+
+  .valueGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .historyGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .valueItem,
+  .historyCard {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 20px 20px 32px;
+    margin-top: 65px; /* Further reduce top margin on smaller screens */
+  }
+
+  .wrapper {
+    padding-top: 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .statsContainer {
+    padding: 32px 20px;
+  }
+
+  .statsWrapper {
+    padding: 32px 20px;
+  }
+
+  .statNumber {
+    font-size: 2.5rem;
+  }
+
+  .valueItem,
+  .historyCard {
+    padding: 24px;
+  }
+
+  .valueHeading {
+    font-size: 1.5rem;
+  }
+}
+
+/* Enhanced Hover Effects */
+.statItem:hover::before {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 8px 32px rgba(255, 255, 255, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,24 @@
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  align-self: start;
+  font-size: 12px;
+  font-weight: 400;
+}
+.input,
+.textarea {
+  border-radius: 5px;
+  background: var(--White, #fff);
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  gap: 10px;
+}
+.input {
+  height: 46px;
+}
+.textarea {
+  min-height: 173px;
+}

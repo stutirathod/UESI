@@ -1,0 +1,144 @@
+.container {
+  background-color: #f3f3f3;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 172px 20px;
+  display: flex;
+}
+@media (width<=991px) {
+  .container {
+    padding: 100px 20px;
+  }
+}
+@media (width<=640px) {
+  .container {
+    padding: 60px 16px;
+  }
+}
+.confirmationBox {
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  position: relative;
+  margin: 100px;
+  margin-top: 150px;
+}
+@media (width<=991px) {
+  .confirmationBox {
+    max-width: 440px;
+  }
+}
+@media (width<=640px) {
+  .confirmationBox {
+    max-width: 100%;
+  }
+}
+.confirmationImage {
+  width: 300px;
+  height: 300px;
+  margin-top: -10px;
+}
+@media (width<=991px) {
+  .confirmationImage {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (width<=640px) {
+  .confirmationImage {
+    width: 200px;
+    height: 200px;
+  }
+}
+.thankYou {
+  color: #000;
+  text-align: center;
+  margin-top: 6px;
+  font-size: 36px;
+  font-weight: 400;
+}
+@media (width<=991px) {
+  .thankYou {
+    font-size: 32px;
+  }
+}
+@media (width<=640px) {
+  .thankYou {
+    font-size: 28px;
+  }
+}
+.orderNumber {
+  color: #0a0d13;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: 400;
+}
+@media (width<=991px) {
+  .orderNumber {
+    font-size: 26px;
+  }
+}
+@media (width<=640px) {
+  .orderNumber {
+    margin-top: 30px;
+    font-size: 22px;
+  }
+}
+.homeButton {
+  color: #fff;
+  cursor: pointer;
+  background-color: #c76932;
+  border: none;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 515px;
+  height: 58px;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+  font-size: 24px;
+}
+@media (width<=991px) {
+  .homeButton {
+    max-width: 440px;
+    height: 52px;
+    font-size: 22px;
+  }
+}
+@media (width<=640px) {
+  .homeButton {
+    height: 48px;
+    font-size: 20px;
+  }
+}
+.generateReceipt {
+  color: #9da3a1;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 50px;
+  font-size: 40px;
+  font-weight: 700;
+}
+@media (width<=991px) {
+  .generateReceipt {
+    /* margin-top: 80px; */
+    font-size: 36px;
+  }
+}
+@media (width<=640px) {
+  .generateReceipt {
+    /* margin-top: 60px; */
+    font-size: 32px;
+  }
+}

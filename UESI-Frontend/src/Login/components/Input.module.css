@@ -1,0 +1,46 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.label {
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+
+.inputWrapper {
+  border-radius: 6px;
+  background-color: #fafafa; /* Slightly lighter input background */
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+  padding: 12px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #ababab;
+  background: transparent;
+}
+
+.icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 21px;
+}
+
+@media (max-width: 991px) {
+  .inputWrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
