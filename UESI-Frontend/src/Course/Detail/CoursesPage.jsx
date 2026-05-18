@@ -8,7 +8,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Utils/AuthContext";
 import { Button } from "../../Utils/FormItems/Button/Button";
 import { FeedbackForm } from "../../feedback/Creation/FeedbackForm";
-import FeedbackSection from "../../Feedback/Show/FeedbackSection";
+import FeedbackSection from "../../feedback/Show/FeedbackSection";
 import VideoViewChart from "./VideoViewChart";
 
 export function CoursesPage() {
