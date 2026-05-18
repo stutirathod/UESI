@@ -5,7 +5,7 @@ import { success, error } from "../../Utils/SmallFunc";
 import { FeedbackForm } from "../../feedback/Creation/FeedbackForm";
 import { AuthContext } from "../../Utils/AuthContext";
 import { Button } from "../../Utils/FormItems/Button/Button";
-import FeedbackSection from "../../Feedback/Show/FeedbackSection";
+import FeedbackSection from "../../feedback/Show/FeedbackSection";
 
 export default function ArticleDetail() {
   const { id } = useParams();
