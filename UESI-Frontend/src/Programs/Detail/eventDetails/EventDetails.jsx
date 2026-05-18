@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 import { success, error } from "../../../Utils/SmallFunc";
 import { FeedbackForm } from "../../../feedback/Creation/FeedbackForm";
 import { AuthContext } from "../../../Utils/AuthContext";
-import FeedbackSection from "../../../Feedback/Show/FeedbackSection"
+import FeedbackSection from "../../../feedback/Show/FeedbackSection"
 import RegistrationChart from "./RegistrationChart";
 
 export function EventDetails() {
